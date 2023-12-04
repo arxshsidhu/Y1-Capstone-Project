@@ -1,4 +1,4 @@
-import csv #credits to a random stack overflow post with a similar issue that helped me utilize this lol, it was too confusing without it
+import csv 
 import random 
 
 data = []
@@ -35,7 +35,6 @@ with open('CoromonDataset.csv',newline='') as file:
 #In the world of Coromon, there are 8 elemental Coromon Types: Normal, Electric, Ghost, Sand, Fire, Ice, Water, and Dark Magic.
 
 for type, coromons in type_data.items(): 
-    #the extremely repetitive definitions that definitely have a easier way to prepare averaging each property 
     hp_tot = sum(int(coromon['Health Points']) for coromon in coromons)
     attack_tot = sum(int(coromon['Attack']) for coromon in coromons)
     special_attack_tot = sum(int(coromon['Special Attack']) for coromon in coromons)
@@ -43,7 +42,7 @@ for type, coromons in type_data.items():
     special_defense_tot = sum(int(coromon['Special Defense']) for coromon in coromons)
     speed_tot = sum(int(coromon['Speed']) for coromon in coromons)
     stamina_tot = sum(int(coromon['Stamina Points']) for coromon in coromons)
-    print(f'For Type {type}:') #prepare for a tornado of yap (i am going insane but happy thanksgiving ig) prints all the averages future arash do not touch these bcs they work perfectly fine and it will take you a not o(n) amount of hours to fix it
+    print(f'For Type {type}:') 
     print(f'Average HP: {hp_tot / len(coromons)}, Average Attack: {attack_tot / len(coromons)}, Average Special Attack: {special_attack_tot / len(coromons)}, Average Defense: {defense_tot / len(coromons)},Average Special Defense: {special_defense_tot / len(coromons)},Average Speed: {special_attack_tot / len(coromons)},Average Stamina: {stamina_tot / len(coromons)}')
     avg_hp[type] = hp_tot / len(coromons)
     avg_attack[type] = attack_tot / len(coromons)
@@ -65,7 +64,7 @@ min_special_defense_type = max(avg_special_defense, key=avg_special_defense.get)
 max_speed_type = max(avg_speed, key=avg_speed.get)
 min_speed_type = min(avg_speed, key=avg_speed.get)
 
-#print the min max averages jhit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#print the min max averages 
 
 print('|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
 #hp min max
@@ -94,12 +93,12 @@ print(f'Theres {len(coromon_data)} Coromons.')
 print('|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
 
 random_coromon = random.choice(list(coromon_data.values()))
-print(f'Random Coromon: {random_coromon}') #prints random coromane (gucci mane reference(this is a cry for help(joke)))
+print(f'Random Coromon: {random_coromon}') #prints random coromon
 
 print('|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
 print(f'Different types of Coromons: {list(type_data.keys())}')
-#shows different types of corosdmflwakdfjmasdldfkamons
+#shows different types of coromons
 
 print('|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
 
-#print('\n'.join(data)) #to test data just untag it
+#print('\n'.join(data)) #to test data 
